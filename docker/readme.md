@@ -13,6 +13,8 @@ Para iniciar os contêiners execute o comando:
 docker-compose up -d
 ```
 
+**Obs.:** Este comando deve ser executado na pasta /docker
+
 Após a execução do comando os contêiners são iniciados e as dependências dos projetos são instaladas.
 
 - crypto_frontend - Interface do projeto, executando na porta 3000.
