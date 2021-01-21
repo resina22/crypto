@@ -16,7 +16,8 @@ export class AuthController {
         token,
       });
     }
-    return response.status(HttpStatus.UNAUTHORIZED).json({
+
+    return response.status(HttpStatus.BAD_REQUEST).json({
       message: 'Campos inválidos',
     });
   }

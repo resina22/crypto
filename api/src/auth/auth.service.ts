@@ -22,7 +22,7 @@ export class AuthService {
     const emailValid = /\w{3,}@\w{2,}.\w{2,}/.exec(email);
     const isOnlyNumber = `${password}`.match(/[^0-9]/);
 
-    return emailValid && !isOnlyNumber;
+    return emailValid && !isOnlyNumber && `${password}`.length == 6;
   }
 
   private newToken(): string {
