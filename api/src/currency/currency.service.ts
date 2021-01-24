@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Currency } from './currency.interface';
+import { Currency, Currencies } from './currency.interface';
 import { CurrencyRepository } from './currency.repository';
 
 @Injectable()
@@ -21,7 +21,7 @@ export class CurrencyService {
     return repository.update(objectCurrency);
   }
 
-  currencies(repository: CurrencyRepository): any {
+  currencies(repository: CurrencyRepository): Promise<string | Currencies> {
     return repository
       .findAll()
       .then((currencies) => currencies)

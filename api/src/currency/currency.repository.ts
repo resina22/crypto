@@ -1,15 +1,15 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { Currency } from './currency.interface';
+import { Currency, Currencies } from './currency.interface';
 import * as Data from '../assets/currencies.json';
 
 export class CurrencyRepository {
   private pathFile;
-  constructor(fileName = 'currencies') {
-    this.pathFile = path.join(__dirname, fileName);
+  constructor(fileName = 'currencies.json') {
+    this.pathFile = path.join(`${__dirname}/../assets/`, fileName);
   }
 
-  async findAll(): Promise<string | Object> {
+  async findAll(): Promise<string | Currencies> {
     try {
       if (!Data) {
         throw 'Erro ao buscar os dados';
