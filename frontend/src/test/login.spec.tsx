@@ -22,11 +22,10 @@ describe('Login component test', function () {
     const input = container.querySelectorAll('input');
 
     expect(button[0]).not.toBeNull();
+    expect(button.length).toEqual(1);
     expect(button[0]?.textContent).toEqual('Entrar');
 
-    expect(input[0]).not.toBeNull();
-    expect(input[1]).not.toBeNull();
-
+    expect(input.length).toEqual(2);
     expect(input[0].id).toEqual('login');
     expect(input[1].id).toEqual('password');
   });
