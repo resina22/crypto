@@ -1,13 +1,11 @@
 import React from 'react';
 import {
   Card,
-  CardActions,
   CardContent,
   CardMedia,
   createStyles,
   Divider,
   Grid,
-  IconButton,
   makeStyles,
   Theme,
 } from '@material-ui/core';
@@ -46,11 +44,6 @@ const Login: React.FC = () => {
             <CardContent>
               <FormLogin />
             </CardContent>
-
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites"></IconButton>
-              <IconButton aria-label="share"></IconButton>
-            </CardActions>
           </Card>
         </Grid>
       </Grid>
