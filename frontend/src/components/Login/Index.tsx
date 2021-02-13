@@ -37,7 +37,7 @@ const Login: React.FC = () => {
         className={style.gridCard}
       >
         <Grid item xs={11} sm={5} md={5} lg={2}>
-          <Card>
+          <Card variant="outlined" >
             <CardMedia image={logo} title="Logo" className={style.img} />
             <Divider />
 
